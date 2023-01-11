@@ -12,21 +12,21 @@ export class EditExperienciaComponent implements OnInit {
   expLab: Experiencia = null;
 
   constructor(private sExperiencia: SExperienciaService, private activatedRouter: ActivatedRoute,
-    private router: Router) {}
+    private router: Router) { }
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.sExperiencia.detail(id).subscribe(
-      data=>{
+      data => {
         this.expLab = data;
-      }, err =>{
+      }, err => {
         alert("Error al modificar experiencia");
         this.router.navigate(['']);
       }
-    )   
+    )
   }
 
-  onUpdate(): void{
+  onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.sExperiencia.update(id, this.expLab).subscribe(
       data => {
@@ -37,5 +37,6 @@ export class EditExperienciaComponent implements OnInit {
       }
     )
   }
+
 
 }

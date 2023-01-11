@@ -10,14 +10,17 @@ div{
 /*Foto De Perfil*/
 @media(min-width:576px){
     #fotodeperfil{
-        position: absolute;
-        width: 15%;
         border-radius: 100%;
         box-shadow: 3px 3px 3px grey;
-        left: 3%;
-        top: 580px;
     }
 }
+
+.descripcion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media(max-width:575px){
     #fotodeperfil{
         position: absolute;

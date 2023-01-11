@@ -10,4 +10,7 @@ public class MrpApplication {
 		SpringApplication.run(MrpApplication.class, args);
 	}
 
+        
+
 }
+
